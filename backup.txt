@@ -1,0 +1,74 @@
+if(titleBox.Text != "" && catBox.Text == "" && qtyBox.Text == "" && dateBox.Text == "")
+                {
+                    query = query + ("Title = @tit");
+                    msg = msg + ("Title = @tit");
+                }
+                else if (titleBox.Text != "" && catBox.Text != "" && qtyBox.Text == "" && dateBox.Text == "")
+                {
+                    query = query + ("Title = @tit AND Category = @cat");
+                    msg = msg + ("Title = @tit AND Category = @cat");
+                }
+                else if (titleBox.Text != "" && catBox.Text != "" && qtyBox.Text != "" && dateBox.Text == "")
+                {
+                    query = query + ("Title = @tit AND Category = @cat AND Quantity = @qty");
+                    msg = msg + ("Title = @tit AND Category = @cat AND Quantity = @qty");
+                }
+                else if (titleBox.Text != "" && catBox.Text != "" && qtyBox.Text != "" && dateBox.Text != "")
+                {
+                    query = query + ("Title = @tit AND Category = @cat AND Quantity = @qty AND ExpirationDate = @date");
+                    msg = msg + ("Title = @tit AND Category = @cat AND Quantity = @qty AND ExpirationDate = @date");
+                }
+                else if(titleBox.Text != "" && catBox.Text == "" && qtyBox.Text != "" && dateBox.Text == "")
+                {
+                    query = query + ("Title = @tit AND Quantity = @qty");
+                    msg = msg + ("Title = @tit AND Quantity = @qty");
+                }
+                else if (titleBox.Text != "" && catBox.Text == "" && qtyBox.Text == "" && dateBox.Text != "")
+                {
+                    query = query + ("Title = @tit AND ExpirationDate = @date");
+                    msg = msg + ("Title = @tit AND ExpirationDate = @date");
+                }
+                else if (titleBox.Text == "" && catBox.Text != "" && qtyBox.Text == "" && dateBox.Text == "")
+                {
+                    query = query + ("Category = @cat");
+                    msg = msg + ("Category = @cat");
+                }
+                else if (titleBox.Text == "" && catBox.Text != "" && qtyBox.Text != "" && dateBox.Text == "")
+                {
+                    query = query + ("Category = @cat AND Quantity = @qty");
+                    msg = msg + ("Category = @cat AND Quantity = @qty");
+                }
+                else if (titleBox.Text == "" && catBox.Text != "" && qtyBox.Text == "" && dateBox.Text != "")
+                {
+                    query = query + ("Category = @cat AND ExpirationDate = @date");
+                    msg = msg + ("Category = @cat AND ExpirationDate = @date");
+                }
+                else if (titleBox.Text == "" && catBox.Text != "" && qtyBox.Text != "" && dateBox.Text != "")
+                {
+                    query = query + ("Category = @cat AND Quantity = @qty AND ExpirationDate = @date");
+                    msg = msg + ("Category = @cat AND Quantity = @qty AND ExpirationDate = @date");
+                }
+                else if (titleBox.Text == "" && catBox.Text == "" && qtyBox.Text != "" && dateBox.Text != "")
+                {
+                    query = query + ("Quantity = @qty AND ExpirationDate = @date");
+                    msg = msg + ("Quantity = @qty AND ExpirationDate = @date");
+                }
+                else if (titleBox.Text == "" && catBox.Text == "" && qtyBox.Text == "" && dateBox.Text != "")
+                {
+                    query = query + ("ExpirationDate = @date");
+                    msg = msg + ("ExpirationDate = @date");
+                }
+                else if (titleBox.Text == "" && catBox.Text == "" && qtyBox.Text != "" && dateBox.Text == "")
+                {
+                    query = query + ("Quantity = @qty");
+                    msg = msg + ("Quantity = @qty");
+                }
+                else if (titleBox.Text == "" && catBox.Text == "" && qtyBox.Text == "" && dateBox.Text != "")
+                {
+                    query = query + ("ExpirationDate = @date'");
+                    msg = msg + ("ExpirationDate = @date'");
+                }
+                else if (titleBox.Text != "" && catBox.Text != "" && qtyBox.Text == "" && dateBox.Text != "")
+                {
+                    query = query + "Title = @tit AND Category = @cat AND ExpirationDate = @date";
+                }
